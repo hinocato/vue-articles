@@ -42,7 +42,5 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} '
           cd /home/ec2-user/vue-articles &&
           git checkout main  &&
-          git fetch --all &&
-          git reset --hard origin/main &&
           git pull origin main
           '
