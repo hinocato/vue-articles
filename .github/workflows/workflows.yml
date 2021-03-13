@@ -39,10 +39,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} '
           cd /home/ec2-user/vue-articles &&
           sudo git checkout main  &&
-          sudo git pull origin main
-          '
-          # yarnでビルドを行い、nuxtを再反映
-          cd /home/ec2-user/vue-articles &&
+          sudo git pull origin main &&
           yarn upgrade &&
           yarn build &&
           pm2 restart vue-articles
+          '
