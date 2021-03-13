@@ -44,9 +44,3 @@ jobs:
           sudo git checkout main  &&
           sudo git pull origin main &&
           '
-
-          # yarnでビルドを行い、nuxtを再反映
-          cd /home/ec2-user/vue-articles &&
-          yarn upgrade &&
-          yarn build &&
-          pm2 restart vue-articles
