@@ -46,8 +46,7 @@ jobs:
           '
 
           # yarnでビルドを行い、nuxtを再反映
-          yarn upgrade
-          yarn build
+          cd /home/ec2-user/vue-articles &&
+          yarn upgrade &&
+          yarn build &&
           pm2 restart vue-articles
-
-          
