@@ -46,7 +46,7 @@ jobs:
           '
 
           ## yarnでビルドを行い、nuxtを再反映
-          yarn upgrade &&
-          yarn build &&
+          yarn upgrade
+          yarn build
           pm2 restart vue-articles
           
