@@ -6,8 +6,20 @@
     <div class="app-body">
       <nuxt />
     </div>
+    <div class="app-footer">
+      <Footer />
+    </div>
   </div>
 </template>
+
+<script>
+  import Footer from "@/components/Footer.vue";
+  export default {
+    components: {
+      Footer
+    }
+  }
+</script>
 
 <style>
 html {
@@ -72,5 +84,6 @@ html {
 .app-body {
   padding-top: 70px;
   padding-right: 70px;
+  padding-bottom: 20px;
 }
 </style>
