@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Nuxt />
+    <div class="app-header">
+      <nabvar />
+    </div>
+    <div class="app-body">
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -31,6 +36,10 @@ html {
   margin: 0;
 }
 
+.navbar-space {
+  min-height: 60px;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -58,5 +67,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.app-body {
+  padding-top: 70px;
+  padding-right: 70px;
 }
 </style>
