@@ -1,6 +1,6 @@
 <template>
   <el-menu class="top-navbar" mode="horizontal" background-color="#f08080" text-color="#f0f8ff" active-text-color="#f0f8ff">
-  <el-menu-item index="/" class="top-navbar-title">articles.hinocato.com</el-menu-item>
+  <el-menu-item index="/" class="top-navbar-title">portfolio.hinocato.com</el-menu-item>
   <el-submenu index="/aboutme" class="dock-right">
     <template slot="title">SourceCode</template>
     <el-menu-item index="2-1"><a href="https://github.com/hinocato/vue-articles" target="_blanck">Web</a></el-menu-item>
