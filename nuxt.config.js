@@ -1,3 +1,5 @@
+import * as FontAwesome from './build/fontawesome';
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,8 +33,17 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    ['@nuxtjs/fontawesome', { component: 'fontawesome', suffix: true } ]
   ],
+
+  fontawesome: {
+    icons: {
+      solid: FontAwesome.solid,
+      regular: FontAwesome.regular,
+      brands: FontAwesome.brands
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

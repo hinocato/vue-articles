@@ -22,24 +22,6 @@
         >
           GitHub
         </a>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
       </div>
     </div>
   </div>
@@ -47,6 +29,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default Vue.extend({})
 </script>
