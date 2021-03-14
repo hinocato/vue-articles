@@ -3,10 +3,11 @@
   <el-menu-item index="/" class="top-navbar-title">portfolio.hinocato.com</el-menu-item>
   <el-submenu index="/aboutme" class="dock-right">
     <template slot="title">SourceCode</template>
-    <el-menu-item index="2-1"><a href="https://github.com/hinocato/vue-articles" target="_blanck">Web</a></el-menu-item>
+    <el-menu-item index="2-1"><el-link href="https://github.com/hinocato/vue-articles" target="_blanck">Web</el-link></el-menu-item>
     <el-menu-item index="2-2">Api</el-menu-item>
   </el-submenu>
   <el-menu-item index="3" class="dock-right">About me</el-menu-item>
+  <el-menu-item index="4" class="dock-right">login</el-menu-item>
   </el-menu>
 </template>
 
