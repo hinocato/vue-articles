@@ -48,11 +48,28 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  // auth0 module configuration
+  auth: {
+    strategies: {
+      auth0: {
+        domain: 'dev-z748mr0r.jp.auth0.com',
+        client_id: 'o2gspZXAGRL80ujBiFRSP4n0Y7il3DLN'
+      }
+    },
+    redirect: {
+      login: '/',
+      logout: '/',
+      callback: '/callback',
+      home: '/'
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

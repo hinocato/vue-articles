@@ -31,13 +31,17 @@
 import Vue from 'vue'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export default Vue.extend({})
+export default Vue.extend({
+  created() {
+    console.log(this.$auth.$state);
+  }
+})
+
 </script>
 
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

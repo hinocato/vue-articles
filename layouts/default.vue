@@ -82,8 +82,6 @@ html {
 }
 
 .app-body {
-  padding-top: 70px;
-  padding-right: 70px;
-  padding-bottom: 20px;
+  padding-top: 60px;
 }
 </style>

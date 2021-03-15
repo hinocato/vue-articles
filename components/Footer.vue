@@ -10,6 +10,9 @@
 .footer {
   background-color: #696969;
   min-height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-icon {
