@@ -60,7 +60,12 @@ export default {
     strategies: {
       auth0: {
         domain: 'dev-z748mr0r.jp.auth0.com',
-        client_id: 'o2gspZXAGRL80ujBiFRSP4n0Y7il3DLN'
+        client_id: 'o2gspZXAGRL80ujBiFRSP4n0Y7il3DLN',
+        audience: 'https://dev-z748mr0r.jp.auth0.com/api/v2/',
+        scope: ['openid', 'profile', 'email', 'offline_access'],
+        responseType: 'token',
+        grantType: 'authorization_token',
+        codeChallengeMethod: 'RS256',
       }
     },
     redirect: {

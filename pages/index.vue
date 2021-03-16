@@ -33,7 +33,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default Vue.extend({
   created() {
-    console.log(this.$auth.$state);
   }
 })
 
