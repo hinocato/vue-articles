@@ -1,11 +1,11 @@
 <template>
   <el-menu class="top-navbar" mode="horizontal" background-color="#f08080" text-color="#f0f8ff" active-text-color="#f0f8ff">
-  <el-menu-item index="1" class="top-navbar-title"><nuxt-link to="/">portfolio.hinocato.com</nuxt-link></el-menu-item>
-  <el-menu-item index="2" class="dock-right"><el-link href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Web)</el-link></el-menu-item>
-  <el-menu-item index="3" class="dock-right"><el-link href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Api)</el-link></el-menu-item>
-  <el-menu-item index="4" class="dock-right"><nuxt-link to="/aboutme">About me</nuxt-link></el-menu-item>
-  <el-menu-item v-if="!this.$auth.$state.loggedIn" index="5" class="dock-right" @click="loginWithAuthZero">login</el-menu-item>
-  <el-menu-item v-if="this.$auth.$state.loggedIn" index="5" class="dock-right" @click="logoutWithAuthZero">logout</el-menu-item>
+    <el-menu-item index="1" class="top-navbar-title"><nuxt-link to="/">portfolio.hinocato.com</nuxt-link></el-menu-item>
+    <el-menu-item index="2" class="dock-right"><el-link href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Web)</el-link></el-menu-item>
+    <el-menu-item index="3" class="dock-right"><el-link href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Api)</el-link></el-menu-item>
+    <el-menu-item index="4" class="dock-right"><nuxt-link to="/aboutme">About me</nuxt-link></el-menu-item>
+    <el-menu-item v-if="!this.$auth.$state.loggedIn" index="5" class="dock-right" @click="loginWithAuthZero">login</el-menu-item>
+    <el-menu-item v-if="this.$auth.$state.loggedIn" index="5" class="dock-right" @click="logoutWithAuthZero">logout</el-menu-item>
   </el-menu>
 </template>
 
@@ -27,7 +27,8 @@ export default {
 .top-navbar {
   position: fixed;
   width: 100%;
-  min-height: 60px;
+  max-height: 60px;
+  z-index: 999;
 }
 
 .top-navbar-title {

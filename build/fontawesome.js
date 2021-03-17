@@ -1,4 +1,4 @@
-const solid = ['faDownload', 'faChartLine'];
+const solid = ['faLock'];
 const regular = []
 const brands = ['faGithubSquare']
   

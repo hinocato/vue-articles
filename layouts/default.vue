@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <div class="app-header">
+  <el-container>
+    <el-header class="app-header">
       <nabvar />
-    </div>
-    <div class="app-body">
+    </el-header>
+    <el-main class="app-main">
       <nuxt />
-    </div>
-    <div class="app-footer">
+    </el-main>
+    <el-footer class="app-footer">
       <Footer />
-    </div>
-  </div>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
@@ -39,6 +39,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  flex-flow: column;
+  display: flex;
 }
 
 *,
@@ -46,10 +48,6 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.navbar-space {
-  min-height: 60px;
 }
 
 .button--green {
@@ -81,7 +79,18 @@ html {
   background-color: #35495e;
 }
 
-.app-body {
-  padding-top: 60px;
+.el-header {
+  padding: 0;
 }
+
+.el-main {
+  padding: 10px 10px;
+}
+
+.el-footer {
+  max-height: 30px;
+  padding: 0;
+}
+
+
 </style>

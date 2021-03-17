@@ -1,46 +1,43 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        vue-articles
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <el-row>
+        <el-col v-for="item of items" :key="item.id" :span="6">
+          <ThumbnailCard :id="item.id" :title="item.title" :thumbnailUrl="item.thumbnail_url" :isSaved="item.is_saved" :createAt="item.create_at"/>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Vuex from 'vuex'
+import { mapGetters } from 'vuex'
 
-export default Vue.extend({
-  created() {
+Vue.use(Vuex);
+
+export default {
+  data() {
+    return {};
+  },
+  async created () {},
+  async mounted () {},
+  async asyncData({ store }: { store: any}) {
+    if (store.getters['items'].length) {
+      return;
+    }
+    await store.dispatch('fetchItems');
+  },
+  methods: {},
+  computed: {
+    ...mapGetters(['items'])
   }
-})
-
+}
 </script>
 
 <style>
 .container {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
