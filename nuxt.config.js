@@ -50,6 +50,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth',
+    '@nuxtjs/markdownit'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,6 +75,10 @@ export default {
       callback: '/callback',
       home: '/'
     }
+  },
+
+  markdownit: {
+    injected: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

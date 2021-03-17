@@ -41,6 +41,7 @@ html {
   box-sizing: border-box;
   flex-flow: column;
   display: flex;
+  background: #f0f8ff;
 }
 
 *,
@@ -85,6 +86,7 @@ html {
 
 .el-main {
   padding: 10px 10px;
+  min-height: calc(100vh - 60px - 30px);
 }
 
 .el-footer {

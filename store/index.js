@@ -5,7 +5,15 @@ import Vuex from 'vuex'
 export default () => new Vuex.Store({
   state: {
     items: [],
-    item: {},
+    item: {
+      id: 0,
+      title: '',
+      thumbnail_url: null,
+      text: '',
+      is_saved: false,
+      create_at: '',
+      update_at: ''
+    },
     page: null,
     size: null
   }, 
@@ -35,11 +43,11 @@ export default () => new Vuex.Store({
         console.error(e);
       }
     },
-    async fetchItem({ commit }, id) {
+    async fetchItem({ commit }, { id }) {
       try {
         const response = await axios.get(`https://4fc1wt8cqi.execute-api.ap-northeast-1.amazonaws.com/dev/articles/${id}`);
         const result = response.data;
-        commit("setItem", { items: result.item });
+        commit("setItem", { item: result });
       } catch (e) {
         console.error(e);
       }

@@ -5,7 +5,7 @@
       <span>{{ title }}<fontawesome-icon v-if="toBoolean(isSaved)" class="lock-icon fs-2x" :icon="['fas', 'lock']"/></span>
       <div class="bottom clearfix">
         <time class="time">{{ formatDate(createAt) }}</time>
-        <el-button type="text" class="button">Detail</el-button>
+        <el-link :href="'articles/' + id"><el-button type="text" class="button">Detail</el-button></el-link>
       </div>
     </div>
   </el-card>
