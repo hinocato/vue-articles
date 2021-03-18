@@ -3,8 +3,8 @@
 		<div v-if="!item.is_saved">
 			<el-row class="button-area" justify="space-between">
 				<el-button class="button" @click="clickCancel(item.id)" plain>キャンセル</el-button>
-				<el-button class="button" type="primary" plain>保存</el-button>
-				<el-button class="button" type="danger" plain>削除</el-button>
+				<el-button class="button" @click="clickSave(item)" type="primary" plain>保存</el-button>
+				<el-button class="button" @click="clickDelete(item.id)" type="danger" plain>削除</el-button>
 			</el-row>
 			<el-row class="article-body" type="flex" justify="space-between">
 				<el-col>
@@ -33,6 +33,7 @@
 </template>
 
 <script lang="ts">
+import articlesApi from '@/plugins/axios/modules/articlesApi'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { mapGetters } from 'vuex'
@@ -56,6 +57,17 @@ export default {
       return Boolean(bool)
     },
 		clickCancel(id: number) {
+			window.location.href = `/articles/${id}`;
+		},
+		async clickSave(item: any) {
+      try {
+			  await articlesApi.putArticleById(item);
+			  window.location.href = `/articles/${item.id}`;
+      } catch (e) {
+        console.error(e);
+      }
+		},
+		clickDelete(id: number) {
 			window.location.href = `/articles/${id}`;
 		}
   },

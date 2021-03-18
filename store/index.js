@@ -51,7 +51,7 @@ export default () => new Vuex.Store({
       } catch (e) {
         console.error(e);
       }
-    },
+    }
   },
   getters: {
     items: (state) => state.items,

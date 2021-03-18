@@ -1,11 +1,10 @@
 <template>
   <div class="container">
     <el-row v-if="!item.is_saved" class="button-area" justify="space-between">
-			<el-button class="button" @click="clickCancel(item.id)" plain>編集</el-button>
+			<el-button class="button" @click="clickEdit(item.id)" plain>編集</el-button>
     </el-row>
     <el-row class="article-body" type="flex" justify="space-between">
       <el-col>
-        <el-link :href="'/articles/' + item.id + '/edit'"><el-button v-if="this.$auth.$state.loggedIn && !item.is_saved" size="small" icon="el-icon-edit"></el-button></el-link>
         <fontawesome-icon v-if="toBoolean(item.is_saved)" class="lock-icon fs-2x" :icon="['fas', 'lock']"/>
         <span class="timestamp">作成日時 {{formatDate(item.create_at)}}</span>
         <span class="title">{{ item.title }}</span>
@@ -38,6 +37,9 @@ export default {
     },
     toBoolean(bool: any) {
       return Boolean(bool)
+    },
+    clickEdit(id: number) {
+      window.location.href = `/articles/${id}/edit`;
     }
   },
   computed: {
