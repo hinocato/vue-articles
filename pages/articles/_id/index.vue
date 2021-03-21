@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <el-row v-if="!item.is_saved" class="button-area" justify="space-between">
+    <el-row v-show="this.$auth.$state.loggedIn" class="button-area" justify="space-between">
 			<el-button class="button" @click="clickEdit(item.id)" plain>編集</el-button>
     </el-row>
     <el-row class="article-body" type="flex" justify="space-between">
@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { mapGetters } from 'vuex'
@@ -28,17 +28,17 @@ export default {
   },
   async created () {},
   async mounted () {},
-  async asyncData({ store, params }: { store: any, params: any}) {
+  async asyncData({ store, params }) {
     await store.dispatch('fetchItem', { id: params.id });
   },
   methods: {
-    formatDate(datetime: any) {
+    formatDate(datetime) {
       return new Date(datetime).toLocaleString();
     },
-    toBoolean(bool: any) {
+    toBoolean(bool) {
       return Boolean(bool)
     },
-    clickEdit(id: number) {
+    async clickEdit(id) {
       window.location.href = `/articles/${id}/edit`;
     }
   },

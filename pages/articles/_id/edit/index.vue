@@ -4,7 +4,7 @@
 			<el-row class="button-area" justify="space-between">
 				<el-button class="button" @click="clickCancel(item.id)" plain>キャンセル</el-button>
 				<el-button class="button" @click="clickSave(item)" type="primary" plain>保存</el-button>
-				<el-button class="button" @click="clickDelete(item.id)" type="danger" plain>削除</el-button>
+				<el-button class="button" @click="clickDelete(item)" type="danger" plain>削除</el-button>
 			</el-row>
 			<el-row class="article-body" type="flex" justify="space-between">
 				<el-col>
@@ -67,8 +67,13 @@ export default {
         console.error(e);
       }
 		},
-		clickDelete(id: number) {
-			window.location.href = `/articles/${id}`;
+		async clickDelete(item: any) {
+      try {
+			  await articlesApi.deleteArticleById(item);
+			  window.location.href = `/`;
+      } catch (e) {
+        console.error(e);
+      }
 		}
   },
   computed: {

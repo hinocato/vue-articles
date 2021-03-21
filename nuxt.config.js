@@ -17,6 +17,10 @@ export default {
     ]
   },
 
+  router: {
+    middleware: ['authenticated']
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css'
@@ -64,7 +68,7 @@ export default {
         domain: 'dev-z748mr0r.jp.auth0.com',
         client_id: 'o2gspZXAGRL80ujBiFRSP4n0Y7il3DLN',
         audience: 'https://dev-z748mr0r.jp.auth0.com/api/v2/',
-        scope: ['openid', 'profile', 'email', 'offline_access'],
+        scope: ['openid', 'profile', 'email'],
         responseType: 'token',
         grantType: 'authorization_token',
         codeChallengeMethod: 'RS256',

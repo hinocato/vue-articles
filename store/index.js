@@ -15,7 +15,8 @@ export default () => new Vuex.Store({
       update_at: ''
     },
     page: null,
-    size: null
+    size: null,
+    loggedIn: false,
   }, 
   mutations: {
     setItems (state, { items }) {
@@ -29,6 +30,9 @@ export default () => new Vuex.Store({
     },
     setPage (state, { page }) {
       state.page = page;
+    },
+    setLoggedIn(state, { loggedIn }) {
+      state.loggedIn = loggedIn;
     }
   },
   actions: {
@@ -51,10 +55,17 @@ export default () => new Vuex.Store({
       } catch (e) {
         console.error(e);
       }
+    },
+    setLogin({ commit }) {
+      commit("setLoggedIn", true);
+    },
+    setLogout({ commit }) {
+      commit("setLoggedIn", false);
     }
   },
   getters: {
     items: (state) => state.items,
-    item: (state) => state.item
+    item: (state) => state.item,
+    loggedIn: (state) => state.loggedIn
   },
 })
