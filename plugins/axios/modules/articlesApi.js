@@ -5,6 +5,10 @@ export default {
     const response = await axios.put(`/articles/${item.id}`, item);
     return response.data;
   },
+  async postArticle(item) {
+    const response = await axios.post('/articles', item);
+    return response.data;
+  },
   async deleteArticleById(item) {
     const response = await axios.delete(`/articles/${item.id}`);
     return response.data;

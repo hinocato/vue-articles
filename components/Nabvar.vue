@@ -4,8 +4,11 @@
     <el-menu-item index="2" class="dock-right"><el-link :underline="false" href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Web)</el-link></el-menu-item>
     <el-menu-item index="3" class="dock-right"><el-link :underline="false" href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Api)</el-link></el-menu-item>
     <el-menu-item index="4" class="dock-right"><el-link :underline="false" href="/aboutme">About me</el-link></el-menu-item>
-    <el-menu-item v-if="!this.$auth.$state.loggedIn" index="5" class="dock-right" @click="loginWithAuthZero">login</el-menu-item>
-    <el-menu-item v-else index="5" class="dock-right" @click="logoutWithAuthZero">logout</el-menu-item>
+    <el-menu-item v-if="!this.$auth.$state.loggedIn" index="5" class="dock-right" @click="loginWithAuthZero"><el-link :underline="false">login</el-link></el-menu-item>
+    <template v-else> 
+      <el-menu-item index="5" class="dock-right" @click="logoutWithAuthZero"><el-link :underline="false">logout</el-link></el-menu-item>
+      <el-menu-item index="6" class="dock-right"><el-link :underline="false" href="/articles/create">New Create</el-link></el-menu-item>
+    </template>
   </el-menu>
 </template>
 
