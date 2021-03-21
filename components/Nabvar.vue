@@ -26,7 +26,7 @@ export default {
     },
     logoutWithAuthZero: async function () {
       await this.$auth.logout();
-      window.location.href = 'https://dev-z748mr0r.jp.auth0.com/v2/logout?returnTo=http://localhost:3000';
+      window.location.href = 'https://dev-z748mr0r.jp.auth0.com/v2/logout?returnTo=http://articles.hinocato.com';
     }
   },
   computed: {
