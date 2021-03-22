@@ -2,7 +2,7 @@
   <el-menu class="top-navbar" mode="horizontal" background-color="#f08080" text-color="#f0f8ff" active-text-color="#f0f8ff">
     <el-menu-item index="1" class="top-navbar-title"><el-link :underline="false" href="/">portfolio.hinocato.com</el-link></el-menu-item>
     <el-menu-item index="2" class="dock-right"><el-link :underline="false" href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Web)</el-link></el-menu-item>
-    <el-menu-item index="3" class="dock-right"><el-link :underline="false" href="https://github.com/hinocato/vue-articles" target="_blanck">SourceCode(Api)</el-link></el-menu-item>
+    <el-menu-item index="3" class="dock-right"><el-link :underline="false" href="https://github.com/hinocato/lambda-vue-articles" target="_blanck">SourceCode(Api)</el-link></el-menu-item>
     <el-menu-item index="4" class="dock-right"><el-link :underline="false" href="/aboutme">About me</el-link></el-menu-item>
     <el-menu-item v-if="!this.$auth.$state.loggedIn" index="5" class="dock-right" @click="loginWithAuthZero"><el-link :underline="false">login</el-link></el-menu-item>
     <template v-else> 

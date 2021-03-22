@@ -5,7 +5,8 @@
       <p class="text">このWebサイトはポートフォリオとして作成したサイトです。</p>
       <p class="text">Nuxt.jsでフロントエンド、lambdaでバックエンドを構成しています。</p>
       <p class="text">全体構成と簡単な技術採用理由は<el-link href="/articles/1">こちら</el-link>に記載しています。</p>
-      <p class="text">ログインすると記事の追加、削除、編集が可能です。</p>
+      <p class="text">ログインすると記事の追加、削除、編集が可能です（鍵マーク付は編集不可）。</p>
+      <p class="text">アカウントは自由に作成出来ないようにしています。</p>
     </div>
     <div class="text-content">
       <p class="title">製作者について</p>

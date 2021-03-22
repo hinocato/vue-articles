@@ -49,8 +49,9 @@ export default {
 }
 
 .image {
-  width: 300px;
+  min-width: 300px;
   height: 200px;
+  width: 100%;
   object-fit: contain;
 }
 

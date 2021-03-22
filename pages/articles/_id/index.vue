@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <el-row v-show="this.$auth.$state.loggedIn" class="button-area" justify="space-between">
+    <el-row v-show="this.$auth.$state.loggedIn && !item.is_saved" class="button-area" justify="space-between">
 			<el-button class="button" @click="clickEdit(item.id)" plain>編集</el-button>
     </el-row>
     <el-row class="article-body" type="flex" justify="space-between">
